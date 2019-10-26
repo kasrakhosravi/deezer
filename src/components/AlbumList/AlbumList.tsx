@@ -13,7 +13,7 @@ import AlbumListItem from '../AlbumListItem'
 interface IProps {
     albums: Array<IAlbum>,
     selectedAlbum: IAlbum,
-    onAlbumSelected: Function,
+    onSelectAlbum: Function,
 }
 
 class AlbumList extends Component<IProps> {
@@ -28,10 +28,8 @@ class AlbumList extends Component<IProps> {
         const {
             albums,
             selectedAlbum,
-            onAlbumSelected,
+            onSelectAlbum,
         } = this.props;
-
-        console.log('PROPS', this.props);
 
         // local components
         const albumListItemView = (album: IAlbum) => (
@@ -39,7 +37,7 @@ class AlbumList extends Component<IProps> {
                 className={(selectedAlbum && selectedAlbum.id === album.id ? 'is-active' : '')}
                 album={album}
                 key={album.id}
-                onAlbumSelected={onAlbumSelected}
+                onSelectAlbum={onSelectAlbum}
             />
         );
 

@@ -56,10 +56,12 @@ class Artist extends Component<IProps> {
             albumsLoading,
             selectedAlbum,
             selectedAlbumTracks,
-            onAlbumSelected,
+            actions,
         } = this.props;
 
-        console.log('THIS:PROPS', this.props);
+        console.log('this.props', this.props);
+
+        const { onSelectAlbum } = actions;
 
         // local components
         const artistLoadingView = artistLoading ? (
@@ -90,7 +92,7 @@ class Artist extends Component<IProps> {
         const albumsView = !albumsLoading ? (
             <AlbumsList
                 albums={albums}
-                onAlbumSelected={onAlbumSelected}
+                onSelectAlbum={onSelectAlbum}
                 selectedAlbum={selectedAlbum}
             />
         ) : null;

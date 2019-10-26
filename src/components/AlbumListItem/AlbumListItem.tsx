@@ -7,7 +7,7 @@ import IAlbum from '../../interfaces/Album';
 
 interface IProps {
     album: IAlbum,
-    onAlbumSelected: Function,
+    onSelectAlbum: Function,
     className: String,
 }
 
@@ -19,8 +19,8 @@ class AlbumListItem extends Component<IProps> {
 
     // local methods
     onClick = () => {
-        const { album, onAlbumSelected } = this.props;
-        onAlbumSelected(album.id);
+        const { album, onSelectAlbum } = this.props;
+        onSelectAlbum(album.id);
     };
 
     render() {
