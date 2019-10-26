@@ -1,8 +1,13 @@
+
+//  global dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// local dependencies
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
