@@ -4,8 +4,12 @@ import React, { Component } from 'react';
 
 // local dependencies
 import AlbumsList from '../AlbumList';
+import TrackList from '../TrackList';
+
+// interfaces
 import IArtist from '../../interfaces/Artist';
 import IAlbum from '../../interfaces/Album';
+import ITrack from '../../interfaces/Track';
 
 interface IProps {
     fetchArtist: (id: any) => void,
@@ -13,10 +17,10 @@ interface IProps {
     artist: IArtist,
     albums: Array<IAlbum>,
     selectedAlbum: IAlbum,
-    selectedAlbumTracks: {},
+    selectedAlbumTracks: Array<ITrack>,
     artistLoading: boolean,
     albumsLoading: boolean,
-    onAlbumSelected: (id: any) => void,
+    onAlbumSelected: Function,
     actions: any,
 }
 
@@ -59,8 +63,6 @@ class Artist extends Component<IProps> {
             actions,
         } = this.props;
 
-        console.log('this.props', this.props);
-
         const { onSelectAlbum } = actions;
 
         // local components
@@ -97,6 +99,14 @@ class Artist extends Component<IProps> {
             />
         ) : null;
 
+        const trackListView =
+            selectedAlbum && selectedAlbumTracks.length > 0 ? (
+                <TrackList
+                    album={selectedAlbum}
+                    tracks={selectedAlbumTracks}
+                />
+            ) : null;
+
 
 
         return (
@@ -105,6 +115,7 @@ class Artist extends Component<IProps> {
               {artistView}
               {albumsLoadingView}
               {albumsView}
+              {trackListView}
           </div>
         );
     }

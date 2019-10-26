@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@types/jest": "^24.0.20",
+    "@types/moment-duration-format": "^2.2.2",
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "babel-polyfill": "^6.26.0",
-    "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
@@ -40,10 +40,13 @@
     ]
   },
   "devDependencies": {
+    "@types/moment": "^2.13.0",
     "@types/react-redux": "^7.1.5",
     "@types/react-router-dom": "^5.1.0",
     "@types/react-router-redux": "^5.0.18",
     "history": "^4.10.1",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
     "react-router-redux": "^4.0.8",
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "^2.1.0",
