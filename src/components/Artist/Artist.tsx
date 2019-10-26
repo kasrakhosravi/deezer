@@ -3,14 +3,16 @@
 import React, { Component } from 'react';
 
 // local dependencies
+import AlbumsList from '../AlbumList';
 import IArtist from '../../interfaces/Artist';
+import IAlbum from '../../interfaces/Album';
 
 interface IProps {
     fetchArtist: (id: any) => void,
     id: number,
     artist: IArtist,
-    albums: [],
-    selectedAlbum: {},
+    albums: Array<IAlbum>,
+    selectedAlbum: IAlbum,
     selectedAlbumTracks: {},
     artistLoading: boolean,
     albumsLoading: boolean,
@@ -85,11 +87,22 @@ class Artist extends Component<IProps> {
             <div className="loading-data">Loading albums...</div>
         ) : null;
 
+        const albumsView = !albumsLoading ? (
+            <AlbumsList
+                albums={albums}
+                onAlbumSelected={onAlbumSelected}
+                selectedAlbum={selectedAlbum}
+            />
+        ) : null;
+
+
+
         return (
           <div>
               {artistLoadingView}
               {artistView}
               {albumsLoadingView}
+              {albumsView}
           </div>
         );
     }

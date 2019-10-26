@@ -9,8 +9,8 @@ export default (id: any) => {
         dispatch(fetchAllAlbumsRequest());
 
         try {
-            const { json }  = await callApi(ARTIST_ALBUMS_URL.replace(':id', id));
-            dispatch(fetchAllAlbumsSuccess(json.data || json));
+            const result  = await callApi(ARTIST_ALBUMS_URL.replace(':id', id));
+            dispatch(fetchAllAlbumsSuccess(result.json.data));
         } catch({ error }) {
             console.log('err', error);
         }
