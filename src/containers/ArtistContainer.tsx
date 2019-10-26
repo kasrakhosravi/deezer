@@ -35,7 +35,7 @@ const mapStateToProps = (state: any, props: any) => {
 function mapDispatchToProps(dispatch: any) {
     const actions = bindActionCreators(
         {
-            onFetchArtist: FetchArtist,
+            fetchArtist: FetchArtist,
             onSelectAlbum: SelectAlbum,
         },
         dispatch

@@ -6,7 +6,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import SearchBoxContainer from '../containers/SearchBoxContainer';
+// import SearchBoxContainer from '../containers/SearchBoxContainer';
 import ArtistContainer from '../containers/ArtistContainer';
 
 function Root(props: any) {
@@ -17,7 +17,6 @@ function Root(props: any) {
         <Provider store={store}>
             <ConnectedRouter history={history}>
                 <div className="container">
-                    <SearchBoxContainer />
                     <Route path="/artist/:id" component={ArtistContainer} />
                 </div>
             </ConnectedRouter>
