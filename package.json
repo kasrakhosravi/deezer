@@ -48,5 +48,6 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-promise-middleware": "^6.1.1"
-  }
+  },
+  "proxy": "https://api.deezer.com"
 }

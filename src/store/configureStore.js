@@ -5,7 +5,6 @@ import thunkMiddleware from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import promiseMiddleware from 'redux-promise-middleware';
 
 // local dependencies
 import rootReducer from '../reducers';
@@ -21,8 +20,7 @@ function configureStore(initialState) {
 	const enhancer = composeWithDevTools(
 		applyMiddleware(
 			thunkMiddleware,
-			promiseMiddleware(),
-			reactRouterMiddleware
+			reactRouterMiddleware,
 		)
 	);
 

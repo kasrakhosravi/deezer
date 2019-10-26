@@ -2,8 +2,7 @@
 // global dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ConnectedRouter } from 'react-router-redux';
-import { Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // import SearchBoxContainer from '../containers/SearchBoxContainer';
@@ -11,15 +10,15 @@ import ArtistContainer from '../containers/ArtistContainer';
 
 function Root(props: any) {
 
-    const { store, history } = props;
+    let { store, history } = props;
 
     return (
         <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <div className="container">
-                    <Route path="/artist/:id" component={ArtistContainer} />
-                </div>
-            </ConnectedRouter>
+            { /* Tell the Router to use our enhanced history */ }
+            <Router history={history}>
+                <Route path="/artist/:id" component={ArtistContainer}>
+                </Route>
+            </Router>
         </Provider>
     );
 }

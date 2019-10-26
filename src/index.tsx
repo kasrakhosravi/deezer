@@ -1,32 +1,16 @@
 
 // global dependencies
 import React from 'react';
-import PropTypes from 'prop-types';
-import { ConnectedRouter } from 'react-router-redux';
-import { Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { render } from 'react-dom';
 
-// import SearchBoxContainer from '../containers/SearchBoxContainer';
-import ArtistContainer from './containers/ArtistContainer';
+// local dependencies
+import { configureStore, history } from './store/configureStore';
+import Root from './components/Root';
 
-function Root(props: any) {
+// initialization
+const store = configureStore();
 
-    const { store, history } = props;
-
-    return (
-        <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <div className="container">
-                    <Route path="/artist/:id" component={ArtistContainer} />
-                </div>
-            </ConnectedRouter>
-        </Provider>
-    );
-}
-
-Root.propTypes = {
-    store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-};
-
-export default Root;
+render(
+    <Root store={store} history={history} />,
+    document.getElementById('root'),
+);

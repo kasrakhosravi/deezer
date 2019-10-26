@@ -9,9 +9,8 @@ const callApi = (url: string) =>
             error => Promise.reject(error),
         )
         .then(
-            json => (json),
-            error => (error),
-        )
-        .catch(error => ({ error }));
+            json => ({json}),
+            error => (error)
+        );
 
 export default callApi;

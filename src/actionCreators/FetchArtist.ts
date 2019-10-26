@@ -9,9 +9,12 @@ export default (id: any) => {
         dispatch(fetchArtistRequest());
 
         try {
-            const { json }  = await callApi(ARTIST_URL.replace(':id', id));
-            dispatch(fetchArtistSuccess(json.data || json));
-        } catch({ error }) {
+            const result  = await callApi(ARTIST_URL.replace(':id', id));
+
+            console.log('result', result.json);
+
+            dispatch(fetchArtistSuccess(result.json));
+        } catch(error) {
             console.log('err', error);
         }
     };

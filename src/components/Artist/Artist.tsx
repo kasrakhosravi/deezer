@@ -15,6 +15,7 @@ interface IProps {
     artistLoading: boolean,
     albumsLoading: boolean,
     onAlbumSelected: (id: any) => void,
+    actions: any,
 }
 
 class Artist extends Component<IProps> {
@@ -28,13 +29,16 @@ class Artist extends Component<IProps> {
         selectedAlbumTracks: [],
     };
 
-    componentWillMount(): void {
-        const { fetchArtist, id } = this.props;
+    componentDidMount(): void {
+        const { id, actions } = this.props;
+        const { fetchArtist } = actions;
+
         fetchArtist(id);
     }
 
     componentWillReceiveProps(nextProps: any) {
-        const { fetchArtist, id } = this.props;
+        const { id, actions } = this.props;
+        const { fetchArtist } = actions;
         if (nextProps.id !== id) {
             fetchArtist(nextProps.id);
         }
@@ -52,6 +56,8 @@ class Artist extends Component<IProps> {
             selectedAlbumTracks,
             onAlbumSelected,
         } = this.props;
+
+        console.log('THIS:PROPS', this.props);
 
         // local components
         const artistLoadingView = artistLoading ? (
