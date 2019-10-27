@@ -11,7 +11,7 @@ export default function searchBoxReducer(state = initialState, action = {}) {
     case types.UPDATE_INPUT_VALUE:
       return {
         ...state,
-        value: action.value,
+        value: action.payload.value,
       };
 
     case types.CLEAR_SUGGESTIONS:
@@ -28,7 +28,7 @@ export default function searchBoxReducer(state = initialState, action = {}) {
 
     case types.UPDATE_SUGGESTIONS:
       // Ignore suggestions if input value changed
-      if (action.value !== state.value) {
+      if (action.payload.value !== state.value) {
         return {
           ...state,
           isLoading: false,
@@ -37,7 +37,7 @@ export default function searchBoxReducer(state = initialState, action = {}) {
 
       return {
         ...state,
-        suggestions: action.suggestions,
+        suggestions: action.payload.suggestions,
         isLoading: false,
       };
 

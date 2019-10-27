@@ -6,6 +6,7 @@ import { Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // import SearchBoxContainer from '../containers/SearchBoxContainer';
+import SearchBoxContainer from '../containers/SearchBoxContainer';
 import ArtistContainer from '../containers/ArtistContainer';
 
 function Root(props: any) {
@@ -16,8 +17,8 @@ function Root(props: any) {
         <Provider store={store}>
             { /* Tell the Router to use our enhanced history */ }
             <Router history={history}>
-                <Route path="/artist/:id" component={ArtistContainer}>
-                </Route>
+                <SearchBoxContainer />
+                <Route path="/artist/:id" component={ArtistContainer} />
             </Router>
         </Provider>
     );
