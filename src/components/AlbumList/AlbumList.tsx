@@ -1,7 +1,7 @@
 
 // global dependencies
 import React, { Component } from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import Map from 'sequences/Map';
 import FromArray from 'sequences/FromArray';
@@ -13,6 +13,8 @@ import AlbumListItem from '../AlbumListItem'
 
 interface IProps {
     albums: Array<IAlbum>,
+    next: string,
+    total: number,
     selectedAlbum: IAlbum,
     onSelectAlbum: Function,
 }
@@ -28,9 +30,13 @@ class AlbumList extends Component<IProps> {
         // initialization
         const {
             albums,
+            next,
+            total,
             selectedAlbum,
             onSelectAlbum,
         } = this.props;
+
+        console.log('AlbumList props', this.props);
 
         // local components
         const albumListItemView = (album: IAlbum) => (
@@ -50,9 +56,17 @@ class AlbumList extends Component<IProps> {
             .read();
 
         return (
-            <React.Fragment>
-                {albumsView}
-            </React.Fragment>
+            <Container noGutters>
+                <Row className="p-0 m-0">
+                    <Col xs={12} className="p-0 m-0">
+                        <h5>Albums Found ({total})</h5>
+                        <hr />
+                    </Col>
+                </Row>
+                <Row className="p-0 m-0">
+                    {albumsView}
+                </Row>
+            </Container>
         );
     }
 }

@@ -34,6 +34,8 @@ export default function artistReducer(state = initialState, action = {}) {
       return {
         ...state,
         albums: action.payload.albums,
+        next: action.payload.next,
+        total: action.payload.total,
         albumsLoading: false,
       };
 

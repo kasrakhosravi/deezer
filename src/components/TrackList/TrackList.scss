@@ -7,6 +7,28 @@
   margin: 2rem 0 0 0;
   padding: 0;
 
+  .TrackListAlbumCover {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 20%;
+  }
+
+  .TrackListAlbumTitle {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: $brand-primary;
+  }
+
+  .TrackListTable__narrow-cel {
+    width: 10%;
+  }
+
+  .TrackListTable__wide-cel {
+    width: 35%;
+  }
+
   thead {
     background-color: #000000;
     color: white;

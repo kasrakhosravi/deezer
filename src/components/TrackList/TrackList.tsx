@@ -63,11 +63,11 @@ class AlbumList extends Component<IProps> {
                 <tbody>
                 {tracks.map(track => (
                     <tr key={track.id}>
-                        <td>{track.track_position}</td>
-                        <td>{track.title}</td>
-                        <td>{track.artist.name}</td>
-                        <td>{moment.duration(track.duration, 'minutes').format('h:mm')}</td>
-                        <td>{moment(album.release_date).format('YYYY')}</td>
+                        <td className="TrackListTable__narrow-cel">{track.track_position}</td>
+                        <td className="TrackListTable__wide-cel">{track.title}</td>
+                        <td className="TrackListTable__wide-cel">{track.artist.name}</td>
+                        <td className="TrackListTable__narrow-cel">{moment.duration(track.duration, 'minutes').format('h:mm')}</td>
+                        <td className="TrackListTable__narrow-cel">{moment(album.release_date).format('YYYY')}</td>
                     </tr>
                 ))}
                 </tbody>

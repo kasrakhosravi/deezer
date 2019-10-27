@@ -17,6 +17,8 @@ interface IProps {
     id: number,
     artist: IArtist,
     albums: Array<IAlbum>,
+    next: string,
+    total: number,
     selectedAlbum: IAlbum,
     selectedAlbumTracks: Array<ITrack>,
     artistLoading: boolean,
@@ -57,6 +59,8 @@ class Artist extends Component<IProps> {
         // initialization
         const {
             albums,
+            next,
+            total,
             albumsLoading,
             selectedAlbum,
             selectedAlbumTracks,
@@ -72,6 +76,8 @@ class Artist extends Component<IProps> {
         const albumsView = !albumsLoading ? (
             <AlbumsList
                 albums={albums}
+                next={next}
+                total={total}
                 onSelectAlbum={onSelectAlbum}
                 selectedAlbum={selectedAlbum}
             />

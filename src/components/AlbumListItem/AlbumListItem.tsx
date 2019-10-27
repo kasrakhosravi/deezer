@@ -31,13 +31,19 @@ class AlbumListItem extends Component<IProps> {
         const { album, className } = this.props;
 
         return (
-            <div
-                className={`album-list-item ${className}`}
-                onClick={this.onClick}
-            >
-                <img src={album.cover_medium} alt="" />
-                <div className="album-list-item-title">{album.title}</div>
-            </div>
+          <Col xs={6} sm={6} md={3} lg={3} xl={3} className="p-0 m-0">
+              <div
+                  className={`album-list-item ${className}`}
+                  onClick={this.onClick}
+              >
+                  <img
+                      src={album.cover_medium}
+                      alt=""
+                      className={`album-list-item-image ${className}`}
+                  />
+                  <div className="album-list-item-title">{album.title}</div>
+              </div>
+          </Col>
         );
     }
 }

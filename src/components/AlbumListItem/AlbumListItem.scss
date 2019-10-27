@@ -28,12 +28,12 @@
   }
 
   &.is-active {
-    .album-list-item-title {
-      color: $brand-primary;
+    .album-list-item-image {
+      border: 2px solid $brand-primary;
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .album-list-item  { width: 20%; }
+
 }

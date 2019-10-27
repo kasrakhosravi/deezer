@@ -5,10 +5,12 @@ export const fetchAllAlbumsRequest = () => ({
     type: Types.FETCH_ALL_ALBUMS_REQUEST,
 });
 
-export const fetchAllAlbumsSuccess = (albums: any) => ({
+export const fetchAllAlbumsSuccess = (albums: any, next: any, total: number) => ({
     type: Types.FETCH_ALL_ALBUMS_SUCCESS,
     payload: {
-        albums
+        albums,
+        next,
+        total,
     }
 });
 
