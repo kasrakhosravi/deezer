@@ -11,11 +11,4 @@ module.exports = function(app) {
             },
         })
     );
-    app.use(
-      'https://api.deezer.com',
-      proxy({
-        target: 'https://api.deezer.com',
-        changeOrigin: true,
-      })
-    );
 };
