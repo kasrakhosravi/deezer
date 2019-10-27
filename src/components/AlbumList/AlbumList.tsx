@@ -16,7 +16,7 @@ interface IProps {
     albums: Array<IAlbum>,
     next: string,
     prev: string,
-    total: number,
+    totalAlbums: number,
     selectedAlbum: IAlbum,
     onSelectAlbum: any,
     paginateAlbums: any,
@@ -35,7 +35,7 @@ class AlbumList extends Component<IProps> {
             albums,
             next,
             prev,
-            total,
+            totalAlbums,
             selectedAlbum,
             onSelectAlbum,
             paginateAlbums,
@@ -80,7 +80,7 @@ class AlbumList extends Component<IProps> {
             <Container noGutters>
                 <Row className="p-0 m-0">
                     <Col xs={12} className="p-0 m-0">
-                        <h5>Albums Found ({total})</h5>
+                        <h5>Albums Found ({totalAlbums})</h5>
                         <hr />
                     </Col>
                 </Row>

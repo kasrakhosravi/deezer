@@ -1,12 +1,16 @@
+
+// global dependencies
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import searchBoxReducer from './searchBoxReducer';
+// local dependencies
 import artistReducer from './artistReducer';
+import searchBoxReducer from './searchBoxReducer';
+
 
 const rootReducer = combineReducers({
-  searchBoxReducer,
   artistReducer,
+  searchBoxReducer,
   routing: routerReducer,
 });
 

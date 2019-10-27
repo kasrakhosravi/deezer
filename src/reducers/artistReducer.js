@@ -7,6 +7,7 @@ const initialState = {
   albumsLoading: false,
   selectedAlbum: null,
   selectedAlbumTracks: [],
+  totalAlbums: null,
 };
 
 export default function artistReducer(state = initialState, action = {}) {
@@ -36,7 +37,7 @@ export default function artistReducer(state = initialState, action = {}) {
         albums: action.payload.albums,
         next: action.payload.next,
         prev: action.payload.prev,
-        total: action.payload.total,
+        totalAlbums: action.payload.total,
         albumsLoading: false,
       };
 

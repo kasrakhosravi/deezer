@@ -19,7 +19,7 @@ interface IProps {
     albums: Array<IAlbum>,
     next: string,
     prev: string,
-    total: number,
+    totalAlbums: number,
     selectedAlbum: IAlbum,
     selectedAlbumTracks: Array<ITrack>,
     artistLoading: boolean,
@@ -62,7 +62,7 @@ class Artist extends Component<IProps> {
             albums,
             next,
             prev,
-            total,
+            totalAlbums,
             albumsLoading,
             selectedAlbum,
             selectedAlbumTracks,
@@ -82,7 +82,7 @@ class Artist extends Component<IProps> {
                 albums={albums}
                 next={next}
                 prev={prev}
-                total={total}
+                totalAlbums={totalAlbums}
                 onSelectAlbum={onSelectAlbum}
                 selectedAlbum={selectedAlbum}
                 paginateAlbums={paginateAlbums}
