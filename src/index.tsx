@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // local dependencies
 import { configureStore, history } from './store/configureStore';
 import Root from './components/Root';
+import './index.css';
 
 // initialization
 const store = configureStore();
