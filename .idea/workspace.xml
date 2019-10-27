@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7f2502c-02cf-4fe2-bd5b-9264f048b207" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/reducers/artistReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/artistReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reducers/artistReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="198">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -68,10 +67,11 @@
       <find>TrackListAlbumTitle</find>
       <find>media</find>
       <find>Loading</find>
+      <find>total</find>
     </findStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/components</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -116,13 +116,10 @@
         <option value="$PROJECT_DIR$/src/setupProxy.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/actionCreators/FetchMoreAlbums.ts" />
-        <option value="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" />
         <option value="$PROJECT_DIR$/src/actions/AlbumActions.ts" />
         <option value="$PROJECT_DIR$/src/actionCreators/FetchAllAlbums.ts" />
         <option value="$PROJECT_DIR$/src/components/SearchBox/SearchBox.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/Artist/Artist.tsx" />
-        <option value="$PROJECT_DIR$/src/components/AlbumList/AlbumList.tsx" />
         <option value="$PROJECT_DIR$/src/interfaces/Album.ts" />
         <option value="$PROJECT_DIR$/src/components/TrackList/TrackList.tsx" />
         <option value="$PROJECT_DIR$/src/components/TrackList/TrackList.scss" />
@@ -130,6 +127,9 @@
         <option value="$PROJECT_DIR$/src/constants/ActionTypes.ts" />
         <option value="$PROJECT_DIR$/src/constants/ApiConstants.ts" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/components/AlbumList/AlbumList.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Artist/Artist.tsx" />
+        <option value="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" />
         <option value="$PROJECT_DIR$/src/reducers/artistReducer.js" />
       </list>
     </option>
@@ -239,18 +239,18 @@
       <workItem from="1572155155092" duration="427000" />
       <workItem from="1572155599328" duration="876000" />
       <workItem from="1572156490626" duration="10972000" />
-      <workItem from="1572185070496" duration="10946000" />
+      <workItem from="1572185070496" duration="11127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42137000" />
+    <option name="totallyTimeSpent" value="42318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38483548" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38483548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Storybook" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -690,8 +690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/artistReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="198">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>

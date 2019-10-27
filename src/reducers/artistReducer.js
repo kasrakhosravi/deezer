@@ -8,6 +8,8 @@ const initialState = {
   selectedAlbum: null,
   selectedAlbumTracks: [],
   totalAlbums: null,
+  next: () => null,
+  prev: () => null,
 };
 
 export default function artistReducer(state = initialState, action = {}) {
@@ -35,10 +37,10 @@ export default function artistReducer(state = initialState, action = {}) {
       return {
         ...state,
         albums: action.payload.albums,
+        albumsLoading: false,
+        totalAlbums: action.payload.total,
         next: action.payload.next,
         prev: action.payload.prev,
-        totalAlbums: action.payload.total,
-        albumsLoading: false,
       };
 
     case types.FETCH_SINGLE_ALBUM_REQUEST:
