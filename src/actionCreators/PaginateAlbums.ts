@@ -1,15 +1,18 @@
 
 import callApi from '../utils/ApiUtils';
-import { ARTIST_ALBUMS_URL } from '../constants/ApiConstants';
 import { fetchAllAlbumsRequest, fetchAllAlbumsSuccess } from '../actions/AlbumActions';
 
-export default (id: any) => {
+// proxy
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+export default (url: any) => {
     let thunk = async (dispatch: any) => {
 
         dispatch(fetchAllAlbumsRequest());
 
         try {
-            const result  = await callApi(ARTIST_ALBUMS_URL.replace(':id', id));
+            const result  = await callApi(proxyurl + url);
+
             const { data, next, prev, total } = result.json;
             dispatch(fetchAllAlbumsSuccess(data, next, prev, total));
         } catch({ error }) {

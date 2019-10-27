@@ -58,7 +58,7 @@ class SearchBox extends Component<IProps> {
         } = actions;
 
         const inputProps = {
-            placeholder: 'Search here ...',
+            placeholder: 'Search your favorite artist here',
             value,
             onChange,
         };

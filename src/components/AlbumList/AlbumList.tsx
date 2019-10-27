@@ -2,6 +2,7 @@
 // global dependencies
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 import Map from 'sequences/Map';
 import FromArray from 'sequences/FromArray';
@@ -14,9 +15,11 @@ import AlbumListItem from '../AlbumListItem'
 interface IProps {
     albums: Array<IAlbum>,
     next: string,
+    prev: string,
     total: number,
     selectedAlbum: IAlbum,
-    onSelectAlbum: Function,
+    onSelectAlbum: any,
+    paginateAlbums: any,
 }
 
 class AlbumList extends Component<IProps> {
@@ -31,12 +34,12 @@ class AlbumList extends Component<IProps> {
         const {
             albums,
             next,
+            prev,
             total,
             selectedAlbum,
             onSelectAlbum,
+            paginateAlbums,
         } = this.props;
-
-        console.log('AlbumList props', this.props);
 
         // local components
         const albumListItemView = (album: IAlbum) => (
@@ -55,6 +58,24 @@ class AlbumList extends Component<IProps> {
             .pipe(ToArray)
             .read();
 
+        const prevAlbumsView = prev ? (
+            <Button
+                className="mr-2"
+                onClick={() => paginateAlbums(prev)}
+            >
+                Previous
+            </Button>
+        ) : null;
+
+        const nextAlbumsView = next ? (
+            <Button
+                className="mr-2"
+                onClick={() => paginateAlbums(next)}
+            >
+                Next
+            </Button>
+        ) : null;
+
         return (
             <Container noGutters>
                 <Row className="p-0 m-0">
@@ -65,6 +86,12 @@ class AlbumList extends Component<IProps> {
                 </Row>
                 <Row className="p-0 m-0">
                     {albumsView}
+                </Row>
+                <Row className="text-center mt-3">
+                    <Col xs={12}>
+                        {prevAlbumsView}
+                        {nextAlbumsView}
+                    </Col>
                 </Row>
             </Container>
         );

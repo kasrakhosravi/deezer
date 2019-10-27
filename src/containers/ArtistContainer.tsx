@@ -8,6 +8,7 @@ import Artist from '../components/Artist';
 import FetchArtist from '../actionCreators/FetchArtist';
 import SelectAlbum from '../actionCreators/SelectAlbum';
 import ClearAlbumTracks from '../actionCreators/ClearAlbumTracks';
+import PaginateAlbums from '../actionCreators/PaginateAlbums';
 
 const ArtistContainer = (props: any) => <Artist {...props} />;
 
@@ -18,6 +19,7 @@ const mapStateToProps = (state: any, props: any) => {
         artistLoading,
         albums,
         next,
+        prev,
         total,
         albumsLoading,
         selectedAlbum,
@@ -29,6 +31,7 @@ const mapStateToProps = (state: any, props: any) => {
         artistLoading,
         albums,
         next,
+        prev,
         total,
         albumsLoading,
         selectedAlbum,
@@ -42,6 +45,7 @@ function mapDispatchToProps(dispatch: any) {
         {
             fetchArtist: FetchArtist,
             clearAlbumTracks: ClearAlbumTracks,
+            paginateAlbums: PaginateAlbums,
             onSelectAlbum: SelectAlbum,
         },
         dispatch

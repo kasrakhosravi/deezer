@@ -18,6 +18,7 @@ interface IProps {
     artist: IArtist,
     albums: Array<IAlbum>,
     next: string,
+    prev: string,
     total: number,
     selectedAlbum: IAlbum,
     selectedAlbumTracks: Array<ITrack>,
@@ -60,6 +61,7 @@ class Artist extends Component<IProps> {
         const {
             albums,
             next,
+            prev,
             total,
             albumsLoading,
             selectedAlbum,
@@ -67,7 +69,7 @@ class Artist extends Component<IProps> {
             actions,
         } = this.props;
 
-        const { onSelectAlbum } = actions;
+        const { onSelectAlbum, paginateAlbums } = actions;
 
         const albumsLoadingView = albumsLoading ? (
             <div className="loading-data">Loading albums...</div>
@@ -77,9 +79,11 @@ class Artist extends Component<IProps> {
             <AlbumsList
                 albums={albums}
                 next={next}
+                prev={prev}
                 total={total}
                 onSelectAlbum={onSelectAlbum}
                 selectedAlbum={selectedAlbum}
+                paginateAlbums={paginateAlbums}
             />
         ) : null;
 
@@ -90,8 +94,6 @@ class Artist extends Component<IProps> {
                     tracks={selectedAlbumTracks}
                 />
             ) : null;
-
-
 
         return (
           <Container>
