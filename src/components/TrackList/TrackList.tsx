@@ -20,6 +20,8 @@ class AlbumList extends Component<IProps> {
         // initialization
         const { tracks, album } = this.props;
 
+        console.log('track props', this.props);
+
         // local components
         const tracksView = (tracks: Array<ITrack>, album: IAlbum) => (
             <table className="track-list">

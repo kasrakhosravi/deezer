@@ -99,6 +99,9 @@ class Artist extends Component<IProps> {
             />
         ) : null;
 
+        console.log('selectedAlbum', selectedAlbum);
+        console.log('selectedAlbumTracks', selectedAlbumTracks);
+
         const trackListView =
             selectedAlbum && selectedAlbumTracks.length > 0 ? (
                 <TrackList
