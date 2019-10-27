@@ -34,5 +34,8 @@ export const fetchAlbumTracksSuccess = (tracks: any) => ({
     }
 });
 
+export const clearAlbumTracks = () => ({
+    type: Types.CLEAR_ALBUM_TRACKS,
+});
 
 

@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import Artist from '../components/Artist';
 import FetchArtist from '../actionCreators/FetchArtist';
 import SelectAlbum from '../actionCreators/SelectAlbum';
+import ClearAlbumTracks from '../actionCreators/ClearAlbumTracks';
 
 const ArtistContainer = (props: any) => <Artist {...props} />;
 
@@ -36,6 +37,7 @@ function mapDispatchToProps(dispatch: any) {
     const actions = bindActionCreators(
         {
             fetchArtist: FetchArtist,
+            clearAlbumTracks: ClearAlbumTracks,
             onSelectAlbum: SelectAlbum,
         },
         dispatch

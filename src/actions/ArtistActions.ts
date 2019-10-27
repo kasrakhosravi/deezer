@@ -11,4 +11,3 @@ export const fetchArtistSuccess = (artist: any) => ({
         artist
     }
 });
-

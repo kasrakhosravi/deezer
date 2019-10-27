@@ -59,6 +59,12 @@ export default function artistReducer(state = initialState, action = {}) {
         selectedAlbumTracks: action.payload.tracks,
       };
 
+    case types.CLEAR_ALBUM_TRACKS:
+      return {
+        ...state,
+        selectedAlbumTracks: [],
+      };
+
     default:
       return state;
   }

@@ -38,16 +38,17 @@ class Artist extends Component<IProps> {
 
     componentDidMount(): void {
         const { id, actions } = this.props;
-        const { fetchArtist } = actions;
-
+        const { fetchArtist, clearAlbumTracks } = actions;
         fetchArtist(id);
+        clearAlbumTracks();
     }
 
     componentWillReceiveProps(nextProps: any) {
         const { id, actions } = this.props;
-        const { fetchArtist } = actions;
+        const { fetchArtist, clearAlbumTracks } = actions;
         if (nextProps.id !== id) {
             fetchArtist(nextProps.id);
+            clearAlbumTracks();
         }
     }
 
@@ -55,8 +56,6 @@ class Artist extends Component<IProps> {
 
         // initialization
         const {
-            artist,
-            artistLoading,
             albums,
             albumsLoading,
             selectedAlbum,
@@ -65,30 +64,6 @@ class Artist extends Component<IProps> {
         } = this.props;
 
         const { onSelectAlbum } = actions;
-
-        // local components
-        /**
-        const artistLoadingView = artistLoading ? (
-            <div className="loading-data">Loading artist...</div>
-        ) : null;
-
-        const artistView = !artistLoading ? (
-            <div className="artist-info">
-                <div className="artist-info-img">
-                    <img src={artist.picture_big} alt="" />
-                </div>
-                <div className="artist-info-text">
-                    <h1>{artist.name}</h1>
-                    <p>Total albums: {artist.nb_album}</p>
-                    <a
-                        href={artist.link}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >More information on Deezer</a>
-                </div>
-            </div>
-        ) : null;
-         */
 
         const albumsLoadingView = albumsLoading ? (
             <div className="loading-data">Loading albums...</div>
@@ -101,9 +76,6 @@ class Artist extends Component<IProps> {
                 selectedAlbum={selectedAlbum}
             />
         ) : null;
-
-        console.log('selectedAlbum', selectedAlbum);
-        console.log('selectedAlbumTracks', selectedAlbumTracks);
 
         const trackListView =
             selectedAlbum && selectedAlbumTracks.length > 0 ? (
