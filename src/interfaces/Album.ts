@@ -6,4 +6,8 @@ export default interface IAlbum {
     cover_big: string;
     title: string;
     release_date: Date;
+    artist: {
+        name: string;
+        picture_small: string;
+    }
 }

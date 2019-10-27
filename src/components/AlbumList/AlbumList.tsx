@@ -87,7 +87,7 @@ class AlbumList extends Component<IProps> {
                 <Row className="p-0 m-0">
                     {albumsView}
                 </Row>
-                <Row className="text-center mt-3">
+                <Row className="text-center mt-3 mb-5">
                     <Col xs={12}>
                         {prevAlbumsView}
                         {nextAlbumsView}

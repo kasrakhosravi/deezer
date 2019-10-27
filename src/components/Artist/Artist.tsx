@@ -1,7 +1,7 @@
 
 // global dependencies
 import React, { Component } from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Spinner } from 'reactstrap';
 
 // local dependencies
 import AlbumsList from '../AlbumList';
@@ -72,7 +72,9 @@ class Artist extends Component<IProps> {
         const { onSelectAlbum, paginateAlbums } = actions;
 
         const albumsLoadingView = albumsLoading ? (
-            <div className="loading-data">Loading albums...</div>
+          <div className="w-100 text-center">
+              <Spinner style={{ width: '3rem', height: '3rem' }} type="grow" />
+          </div>
         ) : null;
 
         const albumsView = !albumsLoading ? (

@@ -24,59 +24,56 @@ class AlbumList extends Component<IProps> {
 
         // local components
         const tracksView = (tracks: Array<ITrack>, album: IAlbum) => (
-            <table className="track-list">
-                <caption>{album.title}</caption>
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Time</th>
-                    <th>Released</th>
-                </tr>
-                </thead>
-                <tbody>
-                {tracks.map(track => (
-                    <tr key={track.id}>
-                        <td>{track.track_position}</td>
-                        <td>{track.title}</td>
-                        <td>{track.artist.name}</td>
-                        <td>{moment.duration(track.duration, 'minutes').format('h:mm')}</td>
-                        <td>{moment(album.release_date).format('YYYY')}</td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
-        );
-
-        const newTracksView = (tracks: Array<ITrack>, album: IAlbum) => (
-            <Table dark responsive borderless striped className="TrackListTable">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Time</th>
-                    <th>Released</th>
-                </tr>
-                </thead>
-                <tbody>
-                {tracks.map(track => (
-                    <tr key={track.id}>
-                        <td className="TrackListTable__narrow-cel">{track.track_position}</td>
-                        <td className="TrackListTable__wide-cel">{track.title}</td>
-                        <td className="TrackListTable__wide-cel">{track.artist.name}</td>
-                        <td className="TrackListTable__narrow-cel">{moment.duration(track.duration, 'minutes').format('h:mm')}</td>
-                        <td className="TrackListTable__narrow-cel">{moment(album.release_date).format('YYYY')}</td>
-                    </tr>
-                ))}
-                </tbody>
-            </Table>
+          <React.Fragment>
+              <div className="TrackListAlbum">
+                <img
+                    src={album.cover_medium}
+                    alt=""
+                />
+                  <div>
+                      <p className="TrackListAlbumTitle">
+                          {album.title}
+                      </p>
+                      <div className="TrackListAlbumArtist">
+                          <img
+                              className="rounded-circle"
+                              src={album.artist.picture_small}
+                              alt=""
+                          />
+                          <p className="TrackListAlbumArtistName">
+                              {album.artist.name}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <Table dark responsive borderless striped className="TrackListTable">
+                  <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Title</th>
+                      <th>Artist</th>
+                      <th>Time</th>
+                      <th>Released</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {tracks.map(track => (
+                      <tr key={track.id}>
+                          <td className="TrackListTable__narrow-cel">{track.track_position}</td>
+                          <td className="TrackListTable__wide-cel">{track.title}</td>
+                          <td className="TrackListTable__wide-cel">{track.artist.name}</td>
+                          <td className="TrackListTable__narrow-cel">{moment.duration(track.duration, 'minutes').format('h:mm')}</td>
+                          <td className="TrackListTable__narrow-cel">{moment(album.release_date).format('YYYY')}</td>
+                      </tr>
+                  ))}
+                  </tbody>
+              </Table>
+          </React.Fragment>
         );
 
         return (
             <React.Fragment>
-                {newTracksView(tracks, album)}
+                {tracksView(tracks, album)}
             </React.Fragment>
         );
     }
