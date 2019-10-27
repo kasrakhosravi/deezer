@@ -1,6 +1,7 @@
 
 // global dependencies
 import React, { Component } from 'react';
+import { Container, Row } from 'reactstrap';
 
 // local dependencies
 import AlbumsList from '../AlbumList';
@@ -115,11 +116,13 @@ class Artist extends Component<IProps> {
 
 
         return (
-          <div>
-              {albumsLoadingView}
-              {albumsView}
-              {trackListView}
-          </div>
+          <Container>
+              <Row>
+                  {albumsLoadingView}
+                  {albumsView}
+                  {trackListView}
+              </Row>
+          </Container>
         );
     }
 }

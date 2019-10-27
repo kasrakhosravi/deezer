@@ -2,6 +2,7 @@
 // global dependencies
 import React from 'react';
 import { render } from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // local dependencies
 import { configureStore, history } from './store/configureStore';

@@ -4,20 +4,22 @@
   position: relative;
   text-align: center;
   margin: 50px 0;
+  background-color: #212121;
 }
 
 // React Autosuggest basic styles
 .react-autosuggest__container {
   position: relative;
-  width: auto;
+  width: 100%;
   display: inline-block;
   text-align: left;
 }
 
 .react-autosuggest__input {
-  width: 240px;
-  height: 30px;
+  width: 100%;
+  height: 60px;
   padding: 10px 20px;
+  font-family: sofia-pro, sans-serif;
   font-size: 16px;
   border-radius: 4px;
   background: $component-bg;
@@ -41,13 +43,27 @@
 .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
-  top: 51px;
-  width: 280px;
+  top: 75px;
+  width: 500px;
   font-size: 16px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   z-index: 2;
   background: $component-bg;
+  color: $body-color;
+}
+
+.react-autosuggest__suggestions-container--open:after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-color: transparent transparent #232323 transparent;
+  z-index: 9998;
 }
 
 .react-autosuggest__suggestions-list {

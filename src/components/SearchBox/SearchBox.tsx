@@ -2,6 +2,7 @@
 // global dependencies
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
+import { Container, Row, Col } from 'reactstrap';
 
 // local dependencies
 import IArtist from '../../interfaces/Artist';
@@ -57,25 +58,29 @@ class SearchBox extends Component<IProps> {
         } = actions;
 
         const inputProps = {
-            placeholder: 'Search here',
+            placeholder: 'Search here ...',
             value,
             onChange,
         };
 
         return (
-            <div>
-                <div className={`search-box ${isLoading ? 'search-box-is-loading' : ''}`}>
-                    <Autosuggest
-                        suggestions={suggestions}
-                        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-                        onSuggestionsClearRequested={onSuggestionsClearRequested}
-                        onSuggestionSelected={onSuggestionSelected}
-                        getSuggestionValue={getSuggestionValue}
-                        renderSuggestion={renderSuggestion}
-                        inputProps={inputProps}
-                    />
-                </div>
-            </div>
+            <Container noGutters>
+                <Row>
+                    <Col xs={12}>
+                        <div className={`search-box ${isLoading ? 'search-box-is-loading' : ''}`}>
+                            <Autosuggest
+                                suggestions={suggestions}
+                                onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+                                onSuggestionsClearRequested={onSuggestionsClearRequested}
+                                onSuggestionSelected={onSuggestionSelected}
+                                getSuggestionValue={getSuggestionValue}
+                                renderSuggestion={renderSuggestion}
+                                inputProps={inputProps}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }
