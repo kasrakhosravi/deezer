@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f2502c-02cf-4fe2-bd5b-9264f048b207" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Album.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Artist.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Artist.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Track.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Track.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +37,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/interfaces/Track.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/ArtistContainer.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <element signature="e#24#50#0" expanded="true" />
+                <element signature="e#138#180#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,11 +175,11 @@
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/AlbumList/AlbumList.tsx" />
         <option value="$PROJECT_DIR$/src/components/Artist/Artist.tsx" />
-        <option value="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" />
         <option value="$PROJECT_DIR$/src/reducers/artistReducer.js" />
         <option value="$PROJECT_DIR$/src/interfaces/Artist.ts" />
         <option value="$PROJECT_DIR$/src/interfaces/Album.ts" />
         <option value="$PROJECT_DIR$/src/interfaces/Track.ts" />
+        <option value="$PROJECT_DIR$/src/containers/ArtistContainer.tsx" />
       </list>
     </option>
   </component>
@@ -204,7 +215,7 @@
               <item name="tidal" type="b2602c69:ProjectViewProjectNode" />
               <item name="tidal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,12 +288,12 @@
       <workItem from="1572155155092" duration="427000" />
       <workItem from="1572155599328" duration="876000" />
       <workItem from="1572156490626" duration="10972000" />
-      <workItem from="1572185070496" duration="11231000" />
+      <workItem from="1572185070496" duration="11258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42422000" />
+    <option name="totallyTimeSpent" value="42449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -473,16 +484,6 @@
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="e#1#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/ArtistContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <element signature="e#24#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -730,6 +731,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ArtistContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#24#50#0" expanded="true" />
+            <element signature="e#138#180#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

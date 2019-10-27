@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 
 // local dependencies
 import SearchBox from '../components/SearchBox';
-
 import UpdateInputValue from '../actionCreators/UpdateInputValue';
 import FetchSuggestions from '../actionCreators/FetchSuggestions';
 import ClearSuggestions from '../actionCreators/ClearSuggestions';

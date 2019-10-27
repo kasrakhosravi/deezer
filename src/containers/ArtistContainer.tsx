@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// local dependencies
 import Artist from '../components/Artist';
 import FetchArtist from '../actionCreators/FetchArtist';
 import SelectAlbum from '../actionCreators/SelectAlbum';
