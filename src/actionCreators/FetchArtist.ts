@@ -5,7 +5,7 @@ import FetchAllAlbums from '../actionCreators/FetchAllAlbums';
 import { fetchArtistRequest, fetchArtistSuccess } from '../actions/ArtistActions';
 
 export default (id: any) => {
-    let thunk = async (dispatch: Function) => {
+    let thunk = async (dispatch: any) => {
 
         dispatch(fetchArtistRequest());
 

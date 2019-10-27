@@ -1,8 +1,10 @@
 
+import { Dispatch } from 'redux';
+
 import { clearAlbumTracks } from '../actions/AlbumActions';
 
 const ClearAlbumTracks = () =>
-    async (dispatch: Function) => {
+    async (dispatch: Dispatch) => {
         dispatch(clearAlbumTracks());
     };
 

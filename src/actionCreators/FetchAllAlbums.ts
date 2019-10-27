@@ -1,10 +1,12 @@
 
+import { Dispatch } from 'redux';
+
 import callApi from '../utils/ApiUtils';
 import { ARTIST_ALBUMS_URL } from '../constants/ApiConstants';
 import { fetchAllAlbumsRequest, fetchAllAlbumsSuccess } from '../actions/AlbumActions';
 
 export default (id: any) => {
-    let thunk = async (dispatch: any) => {
+    let thunk = async (dispatch: Dispatch) => {
 
         dispatch(fetchAllAlbumsRequest());
 

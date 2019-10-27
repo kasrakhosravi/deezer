@@ -1,11 +1,10 @@
 
+import { Dispatch } from 'redux';
+
 import { updateInputValue } from '../actions/SearchBoxActions';
 
 const UpdateInputValue = (event: any, { newValue }: any) => {
-
-    console.log('newValue', newValue);
-
-    return async (dispatch: Function) => {
+    return async (dispatch: Dispatch) => {
         dispatch(updateInputValue(newValue));
     };
 };

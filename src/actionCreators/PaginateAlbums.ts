@@ -1,4 +1,6 @@
 
+import { Dispatch } from 'redux';
+
 import callApi from '../utils/ApiUtils';
 import { fetchAllAlbumsRequest, fetchAllAlbumsSuccess } from '../actions/AlbumActions';
 
@@ -6,7 +8,7 @@ import { fetchAllAlbumsRequest, fetchAllAlbumsSuccess } from '../actions/AlbumAc
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 export default (url: any) => {
-    let thunk = async (dispatch: any) => {
+    let thunk = async (dispatch: Dispatch) => {
 
         dispatch(fetchAllAlbumsRequest());
 

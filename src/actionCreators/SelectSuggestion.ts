@@ -1,8 +1,10 @@
 
+import { Dispatch } from 'redux';
+
 import { navigateTo } from '../actions/RouterActions';
 
 const SelectSuggestion = (event: any, { suggestion }: any) =>
-    async (dispatch: Function) => {
+    async (dispatch: Dispatch) => {
         dispatch(navigateTo(`/artist/${suggestion.id}`));
     };
 

@@ -1,8 +1,10 @@
 
+import { Dispatch } from 'redux';
+
 import { clearSuggestions } from '../actions/SearchBoxActions';
 
 const ClearSuggestions = () =>
-    async (dispatch: Function) => {
+    async (dispatch: Dispatch) => {
         dispatch(clearSuggestions());
     };
 

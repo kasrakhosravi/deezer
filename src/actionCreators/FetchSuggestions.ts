@@ -1,10 +1,12 @@
 
+import { Dispatch } from 'redux';
+
 import callApi from '../utils/ApiUtils';
 import { SEARCH_ARTIST_URL } from '../constants/ApiConstants';
 import { fetchSuggestionsRequest, updateSuggestions } from '../actions/SearchBoxActions';
 
 export default ({ value } : any) => {
-    let thunk = async (dispatch: Function) => {
+    let thunk = async (dispatch: Dispatch) => {
 
         dispatch(fetchSuggestionsRequest());
 
