@@ -71,6 +71,7 @@ class Artist extends Component<IProps> {
 
         const { onSelectAlbum, paginateAlbums } = actions;
 
+        // local components
         const albumsLoadingView = albumsLoading ? (
           <div className="w-100 text-center">
               <Spinner style={{ width: '3rem', height: '3rem' }} type="grow" />

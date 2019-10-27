@@ -41,7 +41,9 @@ class AlbumListItem extends Component<IProps> {
                       alt=""
                       className={`album-list-item-image ${className}`}
                   />
-                  <div className="album-list-item-title">{album.title}</div>
+                  <div className="album-list-item-title">
+                      {album.title}
+                  </div>
               </div>
           </Col>
         );

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-// import SearchBoxContainer from '../containers/SearchBoxContainer';
+// local dependencies
 import SearchBoxContainer from '../containers/SearchBoxContainer';
 import ArtistContainer from '../containers/ArtistContainer';
 
