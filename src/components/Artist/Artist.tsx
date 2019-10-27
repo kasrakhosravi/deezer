@@ -66,6 +66,7 @@ class Artist extends Component<IProps> {
         const { onSelectAlbum } = actions;
 
         // local components
+        /**
         const artistLoadingView = artistLoading ? (
             <div className="loading-data">Loading artist...</div>
         ) : null;
@@ -86,6 +87,7 @@ class Artist extends Component<IProps> {
                 </div>
             </div>
         ) : null;
+         */
 
         const albumsLoadingView = albumsLoading ? (
             <div className="loading-data">Loading albums...</div>
@@ -114,8 +116,6 @@ class Artist extends Component<IProps> {
 
         return (
           <div>
-              {artistLoadingView}
-              {artistView}
               {albumsLoadingView}
               {albumsView}
               {trackListView}

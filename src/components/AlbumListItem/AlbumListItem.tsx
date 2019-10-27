@@ -1,9 +1,11 @@
 
 // global dependencies
 import React, { Component } from 'react';
+import { Col } from 'reactstrap';
 
 // local dependencies
 import IAlbum from '../../interfaces/Album';
+import './AlbumListItem.scss';
 
 interface IProps {
     album: IAlbum,
@@ -32,9 +34,8 @@ class AlbumListItem extends Component<IProps> {
             <div
                 className={`album-list-item ${className}`}
                 onClick={this.onClick}
-                role="presentation"
             >
-                <img src={album.cover_big} alt="" />
+                <img src={album.cover_medium} alt="" />
                 <div className="album-list-item-title">{album.title}</div>
             </div>
         );

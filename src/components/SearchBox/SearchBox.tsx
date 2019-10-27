@@ -5,6 +5,7 @@ import Autosuggest from 'react-autosuggest';
 
 // local dependencies
 import IArtist from '../../interfaces/Artist';
+import './SearchBox.scss';
 
 interface IProps {
     value: string,

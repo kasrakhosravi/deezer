@@ -1,0 +1,39 @@
+
+@import "../../styles/shared";
+
+.album-list-item {
+  @extend .col;
+  position: relative;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-bottom: $gutter;
+
+  img,
+  &-title {
+    cursor: pointer;
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    padding-top: 5px;
+    color: $body-color;
+  }
+
+  &.is-active {
+    .album-list-item-title {
+      color: $brand-primary;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .album-list-item  { width: 20%; }
+}

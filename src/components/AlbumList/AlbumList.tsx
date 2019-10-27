@@ -1,6 +1,7 @@
 
 // global dependencies
 import React, { Component } from 'react';
+import { Container, Row } from 'reactstrap';
 
 import Map from 'sequences/Map';
 import FromArray from 'sequences/FromArray';
@@ -49,9 +50,9 @@ class AlbumList extends Component<IProps> {
             .read();
 
         return (
-            <div>
+            <React.Fragment>
                 {albumsView}
-            </div>
+            </React.Fragment>
         );
     }
 }

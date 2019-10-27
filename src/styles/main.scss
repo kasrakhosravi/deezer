@@ -1,0 +1,23 @@
+@import "shared";
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: sofia-pro, sans-serif;
+}
+
+a {
+  color: $brand-primary;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: $component-bg;
+  margin: 25px 0;
+}
+
+.loading-data {
+  text-align: center;
+  color: $component-color-mute;
+}
