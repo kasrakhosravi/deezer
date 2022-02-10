@@ -52,7 +52,7 @@
     "http-proxy-middleware": "^0.20.0",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react-autosuggest": "^9.4.3",
     "react-router-redux": "^4.0.8",
     "reactstrap": "^8.1.1",
